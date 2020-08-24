@@ -33,7 +33,7 @@ for filename in os.listdir():
         
         # Se não tiver Autorização
         else:
-            date_list = format_DATA( infNFe[6].text )
+            date_list = format_DATA( infNFe[6].text ).split('/')
             pathData  = "XML {}-{}".format( date_list[1], date_list[2] )
             moveNaoAutorizada(filename, pathData)
 
